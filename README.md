@@ -26,11 +26,13 @@ O projeto de **FRONTEND** está separado do projeto de **BACKEND** e as duas apl
 Faça o clone desse repositório em sua máquina local e realize os procesimentos.
 
 ### Como Executar
+
+Instale as ferramentas abaixo
 <details>
 <summary>Através de Linha de comando</summary>
 
 #### Pré-requisitos
-Instale as ferramentas abaixo
+
 * [.NET Core SDK](https://aka.ms/dotnet-download)
 * [Node.js](https://nodejs.org)
 * [Angular CLI](https://cli.angular.io)
