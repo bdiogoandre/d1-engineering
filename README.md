@@ -27,9 +27,6 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 
 ### Como Executar
 
-<details>
-<summary>Através de Linha de comando</summary>
-
 #### Pré-requisitos
 
 **Instale as ferramentas abaixo**
@@ -46,11 +43,8 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 * Irá executar o applicativo de servidor em sua máquina local.
 
 3. Abra <https://localhost:4200> e divirta-se.
-</details>
 
-<details>
-<summary>Através do Visual Studio Code</summary>
-  
+
 #### Pré-requisitos
 
 **Instale as ferramentas abaixo**
@@ -65,6 +59,3 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 1. Abra o diretório **\frontend** na linha de commando e execute **npm run restore**.
 2. Abra o diretório **\backend** no Visual Studio Code.
 3. Pressione **F5** ou **CTRL + F5**.
-</details>
-
-
