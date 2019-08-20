@@ -27,12 +27,12 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 
 ### Como Executar
 
-Instale as ferramentas abaixo
 <details>
 <summary>Através de Linha de comando</summary>
 
 #### Pré-requisitos
 
+**Instale as ferramentas abaixo**
 * [.NET Core SDK](https://aka.ms/dotnet-download)
 * [Node.js](https://nodejs.org)
 * [Angular CLI](https://cli.angular.io)
@@ -53,6 +53,7 @@ Instale as ferramentas abaixo
   
 #### Pré-requisitos
 
+**Instale as ferramentas abaixo**
 * [.NET Core SDK](https://aka.ms/dotnet-download)
 * [Visual Studio Code](https://code.visualstudio.com)
 * [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
