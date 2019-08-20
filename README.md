@@ -1,6 +1,6 @@
 # d1-engineering
 
-## Cadastro de Usuários .NET Core Web API + Angular + Material
+## Cadastro de Usuários .NET Core Web API + Angular + Material + MongoDB
 Este projeto é um exemplo de um cadastro básico de usuários.
 
 O objetivo é compartilhar um pouco da experiência acerca do desenvolvimento WEB utilizando novas tecnologias.
