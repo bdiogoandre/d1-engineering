@@ -27,6 +27,7 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 
 ### Como Executar
 
+#### Através da linha de comando
 #### Pré-requisitos
 
 **Instale as ferramentas abaixo**
@@ -44,7 +45,7 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 
 3. Abra <https://localhost:4200> e divirta-se.
 
-
+#### Através do Visual Studio Code
 #### Pré-requisitos
 
 **Instale as ferramentas abaixo**
