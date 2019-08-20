@@ -11,7 +11,7 @@ O objetivo é compartilhar um pouco da experiência acerca do desenvolvimento WE
 * [ASP.NET Core 2.1](https://docs.microsoft.com/en-us/aspnet/core)
 * [C# for Visual Studio Code 1.21.0](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 * [Angular 8.2](https://angular.io/docs)
-* [MongoDB] (https://www.mongodb.com/)
+* [MongoDB](https://www.mongodb.com/)
 * [Atlas MongoDB](https://www.mongodb.com/cloud/atlas)
 * [Angular Material](https://material.angular.io/)
 * [Typescript 3.5.3](https://www.typescriptlang.org/docs/home.html)
