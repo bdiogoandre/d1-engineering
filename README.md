@@ -27,7 +27,7 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 
 ### Como Executar
 
-#### Através da linha de comando
+#### Através da Linha de Comando
 #### Pré-requisitos
 
 **Instale as ferramentas abaixo**
