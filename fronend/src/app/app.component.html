@@ -1,0 +1,16 @@
+<mat-toolbar fxLayoutAlign="center">
+  <div fxLayout="row" fxLayoutGap="20px">
+    <div fxLayout="column wrap" fxLayoutAlign="center center">
+        <button routerLink="/" mat-mini-fab style="background-color: white; color:#555;"><mat-icon>home</mat-icon></button>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center">
+        <button routerLink="/create" mat-mini-fab color="primary"><mat-icon>create</mat-icon></button>
+    </div>
+    <div fxLayout="column wrap" fxLayoutAlign="center center">
+        <button routerLink="/list" mat-mini-fab><mat-icon>contacts</mat-icon></button>
+    </div>
+</div>
+</mat-toolbar>
+<div class="router-container">
+  <router-outlet></router-outlet>
+</div>

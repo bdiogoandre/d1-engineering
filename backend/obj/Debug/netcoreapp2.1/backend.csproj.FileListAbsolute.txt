@@ -1,0 +1,17 @@
+C:\Users\bdiogo\cadastro-usuarios\backend\bin\Debug\netcoreapp2.1\backend.deps.json
+C:\Users\bdiogo\cadastro-usuarios\backend\bin\Debug\netcoreapp2.1\backend.runtimeconfig.json
+C:\Users\bdiogo\cadastro-usuarios\backend\bin\Debug\netcoreapp2.1\backend.runtimeconfig.dev.json
+c:\Users\bdiogo\cadastro-usuarios\backend\bin\Debug\netcoreapp2.1\backend.dll
+c:\Users\bdiogo\cadastro-usuarios\backend\bin\Debug\netcoreapp2.1\backend.pdb
+c:\Users\bdiogo\cadastro-usuarios\backend\obj\Debug\netcoreapp2.1\backend.csprojAssemblyReference.cache
+c:\Users\bdiogo\cadastro-usuarios\backend\obj\Debug\netcoreapp2.1\backend.csproj.CoreCompileInputs.cache
+c:\Users\bdiogo\cadastro-usuarios\backend\obj\Debug\netcoreapp2.1\backend.RazorAssemblyInfo.cache
+c:\Users\bdiogo\cadastro-usuarios\backend\obj\Debug\netcoreapp2.1\backend.RazorAssemblyInfo.cs
+c:\Users\bdiogo\cadastro-usuarios\backend\obj\Debug\netcoreapp2.1\backend.AssemblyInfoInputs.cache
+c:\Users\bdiogo\cadastro-usuarios\backend\obj\Debug\netcoreapp2.1\backend.AssemblyInfo.cs
+c:\Users\bdiogo\cadastro-usuarios\backend\obj\Debug\netcoreapp2.1\backend.RazorTargetAssemblyInfo.cache
+c:\Users\bdiogo\cadastro-usuarios\backend\obj\Debug\netcoreapp2.1\backend.dll
+c:\Users\bdiogo\cadastro-usuarios\backend\obj\Debug\netcoreapp2.1\backend.pdb
+C:\Users\bdiogo\cadastro-usuarios\backend\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\bdiogo\cadastro-usuarios\backend\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\bdiogo\cadastro-usuarios\backend\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll

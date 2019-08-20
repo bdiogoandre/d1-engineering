@@ -1,0 +1,133 @@
+<div class="new-contact" fxFlex="100%" fxLayoutAlign="center" fxLayout="column">
+    <h1>NOVO CONTATO</h1>
+    <div style="width: 100%;" fxLayoutAlign="center">
+        <mat-card fxFlex="60%" fxLayoutAlign="center">
+            <form fxFlex="90%" fxLayout="column" [formGroup]="newContatForm" (ngSubmit)="onSubmit(newContatForm.value)">
+                <input type="hidden" formControlName="id">
+                <input type="hidden" formControlName="fullName">
+                <div class="address-array">    
+                    <h3>Informações Básicas</h3>
+                    <div fxLayout="row" fxLayoutGap="25px">
+                        <mat-form-field fxFlex="100%">
+                            <input matInput type="text" placeholder="Primeiro nome" formControlName="fname" [ngClass]="{ 'is-invalid': submitted && f.Fname.errors }">
+                            <div *ngIf="submitted && f.Fname.errors" class="invalid-feedback">
+                            <div *ngIf="f.Fname.errors.required">Falta o primeiro nome</div>
+                            </div>
+                        </mat-form-field>
+                        <mat-form-field fxFlex="100%">
+                            <input matInput type="text" placeholder="Ultimo nome" formControlName="lname" [ngClass]="{ 'is-invalid': submitted && f.Lname.errors }">
+                            <div *ngIf="submitted && f.Lname.errors" class="invalid-feedback">
+                            <div *ngIf="f.Lname.errors.required">Falta o ultimo nome</div>
+                            </div>
+                        </mat-form-field>
+                        <mat-form-field fxFlex="100%">
+                            <input matInput type="date" datetime="dd/MM/yyyy" formControlName="nascimento" placeholder="Data de nascimento">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="15px">
+                        <mat-form-field fxFlex="100%">
+                            <input matInput type="text" [textMask]="{mask: cpfMask}" placeholder="CPF" formControlName="cpf" [ngClass]="{ 'is-invalid': submitted && f.cpf.errors }">
+                            <div *ngIf="submitted && f.Fname.errors" class="invalid-feedback">
+                            <div *ngIf="f.Fname.errors.required">CPF é important</div>
+                            </div>
+                        </mat-form-field>
+                        <mat-form-field fxFlex="100%">
+                            <input matInput type="text" [textMask]="{mask: rgMask}" placeholder="RG" formControlName="rg" [ngClass]="{ 'is-invalid': submitted && f.rg.errors }">
+                            <div *ngIf="submitted && f.Fname.errors" class="invalid-feedback">
+                            <div *ngIf="f.Fname.errors.required">RG é important</div>
+                            </div>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="address-array">
+                    <h3>Endereços</h3>
+                    <div formArrayName="enderecos">
+                        <div *ngFor="let end of newContatForm.controls.enderecos.controls; let i=index">
+                            <span>Endereço {{i + 1}}</span>
+                            <span *ngIf="newContatForm.controls.enderecos.controls.length > 1"><button (click)="removeEnd(i)" mat-icon-button color="warn"><mat-icon>delete</mat-icon></button></span>
+                            <div [formGroupName]="i">
+                                <div fxLayout="row" fxLayoutGap="15px">
+                                    <mat-form-field fxFlex="100%">
+                                        <input matInput type="text" placeholder="Endereço" formControlName="endereco">
+                                    </mat-form-field>
+                                    <mat-form-field fxFlex="20%">
+                                        <input matInput type="number" min="0" placeholder="Numero" formControlName="numero">
+                                    </mat-form-field>
+                                </div>
+                                <div fxLayout="row" fxLayoutGap="15px">
+                                    <mat-form-field fxFlex="100%">
+                                        <input matInput type="text" [textMask]="{mask: zipMask}" placeholder="CEP" formControlName="cep">
+                                    </mat-form-field>
+                                    <mat-form-field fxFlex="100%">
+                                        <input matInput type="text" placeholder="Bairro" formControlName="bairro">
+                                    </mat-form-field>
+                                    <mat-form-field fxFlex="100%">
+                                        <input matInput type="text" placeholder="Cidade" formControlName="cidade">
+                                    </mat-form-field>
+                                    <input type="hidden" formControlName="estado">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button mat-icon-button color="primary" type="button" (click)="addEnd()"><mat-icon>add</mat-icon></button>
+                </div>
+                <div class="address-array">
+                    <h3>Telefones</h3>
+                    <div formArrayName="telefones">
+                        <div *ngFor="let end of newContatForm.controls.telefones.controls; let j=index">
+                            <span>Telefone {{j + 1}}</span>
+                            <span *ngIf="newContatForm.controls.telefones.controls.length > 1"><button (click)="removeTel(j)" mat-icon-button color="warn"><mat-icon>delete</mat-icon></button></span>
+                            <div [formGroupName]="j">
+                                <div fxLayout="row" fxLayoutGap="15px">
+                                    <mat-form-field fxFlex="20%">
+                                    <mat-label>Telefones</mat-label>
+                                        <mat-select (change)="changeTelType()" formControlName="telefoneLocal">
+                                            <mat-option value="residencial">
+                                                Residencial
+                                            </mat-option>
+                                            <mat-option value="celular">
+                                                Celular
+                                            </mat-option>
+                                            <mat-option value="comercial">
+                                                Trabalho
+                                            </mat-option>
+                                            <mat-option value="outros">
+                                                Outros
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                    <mat-form-field fxFlex="30%">
+                                        <input matInput type="text" [textMask]="{mask: telMask}" placeholder="Telefone" formControlName="telefone">
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button mat-icon-button color="primary" type="button" (click)="addTel()"><mat-icon>add</mat-icon></button>
+                </div>
+                <div class="address-array">
+                    <h3>Social</h3>
+                    <div fxLayout="row" fxLayoutGap="15px">
+                        <mat-form-field fxFlex="100%">
+                            <input matInput type="text" placeholder="Facebook" formControlName="facebook">
+                        </mat-form-field>
+                        <mat-form-field fxFlex="100%">
+                            <input matInput type="text" placeholder="Twitter" formControlName="twitter">
+                        </mat-form-field>
+                    </div>
+                    <div fxLayout="row" fxLayoutGap="15px">
+                        <mat-form-field fxFlex="100%">
+                            <input matInput type="text" placeholder="LinkedIn" formControlName="linkedin">
+                        </mat-form-field>
+                        <mat-form-field fxFlex="100%">
+                            <input matInput type="text" placeholder="Instagram" formControlName="instagram">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="submit-button">
+                    <button fxFlex="100%" mat-raised-button type="submit" color="primary">Finalizar</button>
+                </div>
+            </form>
+        </mat-card>
+    </div>
+</div>

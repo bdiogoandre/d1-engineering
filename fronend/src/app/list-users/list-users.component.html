@@ -1,0 +1,70 @@
+<div class="new-contact" fxFlex="100%" fxLayoutAlign="center" fxLayout="column">
+    <h1 style="margin-bottom: 5px;">CONTATOS</h1>
+
+    <div style="width: 100%;" fxLayoutAlign="center">
+        <mat-card fxFlex="60%" fxLayoutAlign="center" fxLayout="column">
+            <mat-form-field appearance="outline">
+                <mat-label>Busca</mat-label>
+                <input matInput (keyup)="searchUser($event)" placeholder="Busca">
+                <i matSuffix class="fas fa-search"></i>
+            </mat-form-field>
+            <mat-accordion fxFlex="100%">
+                <mat-expansion-panel *ngFor="let user of usersData">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <h3>{{user.fname}} {{user.lname}}</h3>
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <div fxLayout="row">
+                    <div>
+                        <div>
+                            <p>CPF {{user.cpf}} </p>
+                            <p>RG {{user.rg}}</p>
+                            <p>Nascimento {{user.nascimento | date : "dd/MM/yyyy"}}</p>
+                        </div>
+                        <mat-list>
+                            <div fxLayout="row">
+                                <div>
+                                    <mat-list-item>
+                                        <i mat-list-icon class="fab fa-facebook-f"></i>
+                                        <p mat-line> {{user.facebook}}</p>
+                                    </mat-list-item>
+                                    <mat-list-item>
+                                        <i mat-list-icon class="fab fa-instagram"></i>
+                                        <p mat-line> {{user.instagram}}</p>
+                                    </mat-list-item>
+                                </div>
+                                <div>
+                                    <mat-list-item>
+                                        <i mat-list-icon class="fab fa-twitter"></i>
+                                        <p mat-line> {{user.twitter}}</p>
+                                    </mat-list-item>
+                                    <mat-list-item>
+                                        <i mat-list-icon class="fab fa-linkedin"></i>
+                                        <p mat-line> {{user.linkedin}}</p>
+                                    </mat-list-item>
+                                </div>
+                            </div>
+                        </mat-list>
+                    </div>
+                    <div fxLayoutAlign="end" fxFlex="100%">
+                        <mat-icon mat-list-icon>phone</mat-icon>
+                        <div fxLayout="column" fxLayoutGap="5px">
+                            <p *ngFor="let tel of user.telefones" mat-line> {{tel.telefone}} - {{tel.telefoneLocal}}</p>
+                        </div>
+                    </div>
+                  </div>
+                  <h3>Endereços</h3>
+                  <div *ngFor="let end of user.enderecos">
+                    <p>{{end.endereco}}, {{end.numero}} CEP {{end.cep}} - {{end.bairro}} - {{end.cidade}}</p>
+                  </div>
+                  <button [routerLink]="[ '/edit', user.id ]" style="background-color: black;" mat-mini-fab><i class="fas fa-pencil-alt"></i></button>
+                </mat-expansion-panel>
+              </mat-accordion>
+              <mat-paginator [length]="totalUsers"
+                [pageSize]="10"
+                (page)="pageEvent=getPageEvent($event)">
+            </mat-paginator>
+        </mat-card>
+    </div>
+</div>
