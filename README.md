@@ -13,7 +13,7 @@ O objetivo é compartilhar um pouco da experiência acerca do desenvolvimento WE
 * [Angular 8.2](https://angular.io/docs)
 * [Angular Flex-Layout](https://github.com/angular/flex-layout)
 * [Angular Material](https://material.angular.io/)
-* [Atlas MongoDB](https://www.mongodb.com/cloud/atlas)
+* [Atlas](https://www.mongodb.com/cloud/atlas)
 * [MongoDB](https://www.mongodb.com/)
 * [Typescript 3.5.3](https://www.typescriptlang.org/docs/home.html)
 * [HTML](https://www.w3schools.com/html)
