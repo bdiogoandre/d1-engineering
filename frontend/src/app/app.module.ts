@@ -13,13 +13,15 @@ import { FormsModule, FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { TextMaskModule } from 'angular2-text-mask';
 import { HttpClientModule } from '@angular/common/http'; 
 import { ApiService } from './services/api.service';
+import { InformationPopup } from './popups/information.popup';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeScreenComponent,
     CreateUserComponent,
-    ListUsersComponent
+    ListUsersComponent,
+    InformationPopup
   ],
   imports: [
     BrowserModule,
@@ -33,6 +35,7 @@ import { ApiService } from './services/api.service';
     HttpClientModule
   ],
   providers: [FormBuilder, ApiService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [InformationPopup]
 })
 export class AppModule { }

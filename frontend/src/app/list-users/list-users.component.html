@@ -58,9 +58,15 @@
                   <div *ngFor="let end of user.enderecos">
                     <p>{{end.endereco}}, {{end.numero}} CEP {{end.cep}} - {{end.bairro}} - {{end.cidade}}</p>
                   </div>
-                  <button [routerLink]="[ '/edit', user.id ]" style="background-color: black;" mat-mini-fab><i class="fas fa-pencil-alt"></i></button>
+                  <div fxLayoutGap="10px">
+                    <button [routerLink]="[ '/edit', user.id ]" style="background-color: black;" mat-mini-fab><i class="fas fa-pencil-alt"></i></button>
+                    <button (click)="deleteUser(user.id)" color="warn" mat-mini-fab><i class="fas fa-trash-alt"></i></button>
+                  </div>
                 </mat-expansion-panel>
               </mat-accordion>
+              <div fxLayoutAlign="center center">
+                <mat-spinner *ngIf="isLoading"></mat-spinner>
+              </div>
               <mat-paginator [length]="totalUsers"
                 [pageSize]="10"
                 (page)="pageEvent=getPageEvent($event)">

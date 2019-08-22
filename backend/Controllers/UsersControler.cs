@@ -56,7 +56,7 @@ namespace UserApi.Controllers{
             _userService.Update(id, userIn);
             return NoContent();
         }
-        [HttpDelete("{id:length(24)}")]
+        [HttpDelete("delete/{id:length(24)}")]
         public IActionResult Delete(string Id)
         {
             var user = _userService.Get(Id);

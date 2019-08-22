@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { User } from '../models/users.model';
 import {PageEvent} from '@angular/material/paginator';
+import { MatDialog } from '@angular/material';
+import { InformationPopup } from '../popups/information.popup';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-list-users',
@@ -13,18 +16,21 @@ export class ListUsersComponent implements OnInit {
   totalUsers: Number;
   pageEvent: PageEvent;
   page = 0;
-  constructor(private _api: ApiService) { }
+  isLoading = false;
+  
+  constructor(
+    private _api: ApiService, 
+    public dialog: MatDialog,
+    private _snackBar: MatSnackBar
+    ) { }
 
   ngOnInit() {
-    this._api.countUsers()
-    .subscribe(res => {
-      console.log(res);
-      this.totalUsers = res;
-    })
+    this.countUsers()
     this._api.getUsers(0)
     .subscribe(res => {
       this.usersData = res;
       console.log(this.usersData);
+      this.isLoading = false;
     }, err => {
       console.log(err);
     })
@@ -53,15 +59,47 @@ export class ListUsersComponent implements OnInit {
         console.log(err);
       })
     }else{
-      var skip = 0;
-      skip = 10 * this.page;
-      this._api.getUsers(skip)
-      .subscribe(res => {
-        this.usersData = res;
-        console.log(this.usersData);
-      }, err => {
-        console.log(err);
-      })
+      this.atualizaLista();
     }
+  }
+  deleteUser(userId){
+    console.log(userId)
+    const dialogRef = this.dialog.open(InformationPopup, {
+      data: {id: userId}
+    });
+    dialogRef.afterClosed().subscribe(result =>{
+      if(result){
+        this._api.deleteUser(userId).subscribe(res=>{
+          this._snackBar.open("Usuário excluído com sucesso!", "Excluir", {
+            duration: 2000,
+          });
+          this.atualizaLista();
+        }, (err)=>{
+          console.log(err);
+        })
+      }
+    })
+  }
+  countUsers(){
+    this.isLoading = true;
+    this._api.countUsers()
+    .subscribe(res => {
+      console.log(res);
+      this.totalUsers = res;
+    })
+  }
+  atualizaLista(){
+    this.countUsers()
+    this.isLoading = true;
+    var skip = 0;
+    skip = 10 * this.page;
+    this._api.getUsers(skip)
+    .subscribe(res => {
+      this.usersData = res;
+      this.isLoading = false;
+      console.log(this.usersData);
+    }, err => {
+      console.log(err);
+    })
   }
 }
