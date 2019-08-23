@@ -38,7 +38,7 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 
 #### Passos
 
-1. Abra o diretório **d1-engineering\frontend** na linha de commando e execute **npm run restore**.
+1. Abra o diretório **d1-engineering\frontend** na linha de commando e execute **npm install --save**.
 * Irá instalar todas as dependências e executar a aplicação Angular.
 
 2. Abra o diretório **d1-engineering\backend** na linha de commando e execute **dotnet run**.
