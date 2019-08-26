@@ -26,7 +26,12 @@ namespace UserApi.Controllers{
         [HttpGet("name/{fullName}")]
         public ActionResult<List<User>> GetByName(string fullName)
         {
-            return _userService.GetByName(fullName);
+            var user = _userService.GetByName(fullName);
+            if(user == null)
+            {
+                return NotFound();
+            }
+            return user;
         }
 
         [HttpGet("{id:length(24)}", Name = "GetUser")]
