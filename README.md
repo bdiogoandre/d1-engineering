@@ -61,4 +61,6 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 
 1. Abra o diretório **\frontend** na linha de commando e execute **npm install --save**
 2. Abra o diretório **\backend** no Visual Studio Code.
-3. Pressione **F5** ou **CTRL + F5**.
+3. Pressione **F5** ou **CTRL + F5** para iniciar.
+
+### E divirta-se!!!
