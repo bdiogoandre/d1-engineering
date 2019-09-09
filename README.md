@@ -44,7 +44,7 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 2. Abra o diretório **d1-engineering\backend** na linha de commando e execute **dotnet run**
 * Irá executar o applicativo de servidor em sua máquina local.
 
-3. Abra <https://localhost:4200> e divirta-se.
+3. Abra <https://localhost:4200>.
 
 
 #### ATRAVÉS DO VISUAL STUDIO CODE
@@ -62,5 +62,6 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 1. Abra o diretório **\frontend** na linha de commando e execute **npm install --save**
 2. Abra o diretório **\backend** no Visual Studio Code.
 3. Pressione **F5** ou **CTRL + F5** para iniciar.
+4. Abra https://localhost:4200 
 
-### E divirta-se!!!
+## E divirta-se!!!
