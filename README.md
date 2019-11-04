@@ -1,4 +1,4 @@
-# d1-engineering
+# D1-Engineering
 
 ## Cadastro de Usuários .NET Core Web API + Angular + Material + MongoDB
 Este projeto é um exemplo de um cadastro básico de usuários.
@@ -38,13 +38,13 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 
 #### Passos
 
-1. Abra o diretório **d1-engineering\frontend** na linha de commando e execute **npm install --save**.
+1. Abra o diretório **d1-engineering\frontend** na linha de commando e execute **npm install --save**
 * Irá instalar todas as dependências e executar a aplicação Angular.
 
-2. Abra o diretório **d1-engineering\backend** na linha de commando e execute **dotnet run**.
+2. Abra o diretório **d1-engineering\backend** na linha de commando e execute **dotnet run**
 * Irá executar o applicativo de servidor em sua máquina local.
 
-3. Abra <https://localhost:4200> e divirta-se.
+3. Abra <https://localhost:4200>.
 
 
 #### ATRAVÉS DO VISUAL STUDIO CODE
@@ -59,6 +59,9 @@ Faça o clone desse repositório em sua máquina local e realize os procesimento
 
 #### Passos
 
-1. Abra o diretório **\frontend** na linha de commando e execute **npm run restore**.
+1. Abra o diretório **\frontend** na linha de commando e execute **npm install --save**
 2. Abra o diretório **\backend** no Visual Studio Code.
-3. Pressione **F5** ou **CTRL + F5**.
+3. Pressione **F5** ou **CTRL + F5** para iniciar.
+4. Abra https://localhost:4200 
+
+## E divirta-se!!!
