@@ -39,13 +39,7 @@ export class CreateUserComponent implements OnInit {
       facebook: [''],
       twitter: [''],
       linkedin: [''],
-      instagram: [''],
-      enderecos: this.formBuilder.array([
-        this.initEnd([])
-      ]),
-      telefones: this.formBuilder.array([
-        this.initTel([])
-      ])
+      instagram: ['']
     })
 
     this.route.params.subscribe(params =>{
@@ -53,16 +47,6 @@ export class CreateUserComponent implements OnInit {
       if(this.userId){
         this.api.getUser(this.userId)
         .subscribe(res => {
-          const controlEnd = <FormArray> this.newContatForm.controls['enderecos'];
-          const controlTel = <FormArray> this.newContatForm.controls['telefones'];
-          res.enderecos.forEach(end => {
-            controlEnd.push(this.initEnd(end));
-          });
-          controlEnd.removeAt(1);
-          res.telefones.forEach(tel => {
-            controlTel.push(this.initTel(tel));
-          });
-          controlTel.removeAt(1);
           this.newContatForm.setValue(res)
           console.log(res);
         }, err => {

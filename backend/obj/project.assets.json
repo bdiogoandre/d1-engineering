@@ -13576,30 +13576,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bdiogo\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Bruno\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bdiogo\\cadastro-usuarios\\backend\\backend.csproj",
+      "projectUniqueName": "C:\\Users\\Bruno\\d1-engineering\\backend\\backend.csproj",
       "projectName": "backend",
-      "projectPath": "C:\\Users\\bdiogo\\cadastro-usuarios\\backend\\backend.csproj",
-      "packagesPath": "C:\\Users\\bdiogo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bdiogo\\cadastro-usuarios\\backend\\obj\\",
+      "projectPath": "C:\\Users\\Bruno\\d1-engineering\\backend\\backend.csproj",
+      "packagesPath": "C:\\Users\\Bruno\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bruno\\d1-engineering\\backend\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\bdiogo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Bruno\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://directoneapp.pkgs.visualstudio.com/_packaging/RogueOne/nuget/v3/index.json": {},
+        "https://pkgs.dev.azure.com/directoneapp/_packaging/OneToOneEngine/nuget/v3/index.json": {},
+        "https://pkgs.dev.azure.com/directoneapp/_packaging/OneToOneEngine2/nuget/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {
@@ -13635,6 +13635,7 @@
             "version": "[16.3.0-preview-20190808-03, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -13653,10 +13654,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

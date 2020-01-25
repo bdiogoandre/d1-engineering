@@ -30,7 +30,7 @@ namespace backend
             services.AddCors(options =>{
                 options.AddPolicy(MyAllowSpecificOrigins,
                 buider =>{
-                    buider.WithOrigins("http://localhost:4200")
+                    buider.WithOrigins("http://localhost:8080")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials();  
