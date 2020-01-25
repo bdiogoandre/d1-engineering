@@ -20,12 +20,11 @@ O objetivo é compartilhar um pouco da experiência acerca do desenvolvimento WE
 * [CSS](https://www.w3schools.com/css)
 * [Docker](https://www.docker.com/)
 
-
-A API desenvolvida em **ASP.NET Core** já está configurada para acessar um banco de dados de teste no **[Atlas MongoDB](https://www.mongodb.com/cloud/atlas)**, portanto não será necessário instalar o iniciar um banco de dados MongoDB local.
-
 O projeto de **FRONTEND** está separado do projeto de **BACKEND** e as duas aplicações devem ser executadas separadamente através dos passos abaixo.
 
 Faça o clone desse repositório em sua máquina local e realize os procesimentos.
+
+**Obs:** Veja a mensagem no arquivo appsettings.json para se conectar a um banco de dados MongoDB.
 
 ### Como Executar
 
