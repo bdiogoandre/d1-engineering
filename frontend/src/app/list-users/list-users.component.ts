@@ -47,6 +47,7 @@ export class ListUsersComponent implements OnInit {
     }, err => {
       console.log(err);
     })
+    return event
   }
   searchUser(ev){
     console.log(ev.target.value);

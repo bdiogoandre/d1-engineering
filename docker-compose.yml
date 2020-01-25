@@ -1,0 +1,20 @@
+version: '3'
+services: 
+  frontend:
+    image: bdiogo/frontend-teste-docker:latest
+    build:
+      dockerfile: ./frontend/Dockerfile
+      context: .
+    container_name: frontend-test-docker
+    ports: 
+      - "8080:80"
+    depends_on: 
+      - "backend"
+  backend:
+    image: bdiogo/backend-teste-docker:latest
+    build:
+      dockerfile: ./backend/Dockerfile
+      context: .
+    container_name: backend-teste-docker
+    ports: 
+      - "5001:80"

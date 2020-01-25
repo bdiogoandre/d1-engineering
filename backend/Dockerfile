@@ -1,10 +1,10 @@
 FROM microsoft/dotnet:2.1.302-sdk-alpine AS build-env
 WORKDIR /app
 
-COPY *.csproj ./
+COPY ./backend/*.csproj ./
 RUN dotnet restore
 
-COPY . ./
+COPY ./backend ./
 RUN dotnet publish -c Release -o out
 
 FROM microsoft/dotnet:2.1.1-aspnetcore-runtime-alpine

@@ -8,7 +8,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 const httpOptions = {
   headers: new HttpHeaders({'Content-Type' : 'application/json'})
 };
-const apiUrl = 'https://localhost:5001/api/users';
+const apiUrl = 'http://localhost:5001/api/users';
 
 @Injectable({
   providedIn: 'root'
