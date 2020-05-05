@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aplicacao-backend-deplyment
+spec:
+  selector:
+    matchLabels:
+      app: aplicacao-backend
+  template:
+    metadata:
+      labels:
+        app: aplicacao-backend
+    spec:
+      containers:
+      - name: aplicacao-backend
+        image: bdiogoandre/backend-teste-docker:v3
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
