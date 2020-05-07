@@ -1,0 +1,20 @@
+kubectl get pods
+kubectl get deployments
+
+
+
+CRIA UMA TAG PARA A SUA IMAGEM DO DOCKER
+docker tag bdiogoandre/nome-imagem:v1 nome-repositorio.azurecr.io/nome-imagem:v1
+
+FAZ O LOGIN EM SEU ACR NO AZURE
+az acr login --name nome-repositorio
+
+COLOCA SUA IMAGEM NO REPOSITÓRIO
+docker push nome-repositorio.azurecr.io/nome-imagem:v1
+
+CRIA UM SEGREDO PARA O AKS CONSEGUIR ENXERGAR AS IMAGENS NO ACR
+kubectl create secret docker-registry aks-nome-repositorio.secret --docker-server nome-repositorio.azurecr.io --docker-username bdiogo --docker-password <senha-do-acr> -docker-email bdiogo@direct.one
+
+USAMOS ESSA CONFIGURAÇÃO NO DEPLOYMENT PARA O SEGREDO CRIADO
+imagePullSecrets:
+        - name: aks-nome-repositorio.secrets

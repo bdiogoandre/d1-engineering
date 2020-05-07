@@ -52,7 +52,6 @@ namespace backend
                 app.UseHsts();
             }
             app.UseCors(MyAllowSpecificOrigins);
-            app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

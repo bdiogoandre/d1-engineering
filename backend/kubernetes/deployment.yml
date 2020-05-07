@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aplicacao-backend-deplyment
+  name: aplicacao-backend
 spec:
   selector:
     matchLabels:
@@ -12,11 +12,12 @@ spec:
         app: aplicacao-backend
     spec:
       containers:
-      - name: aplicacao-backend
-        image: bdiogoandre/backend-teste-docker:v3
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: 80
+        - name: aplicacao-backend
+          image: bdiogoandre/backend-teste-docker:v7
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "200m"
+          ports:
+          - containerPort: 80
+      dnsPolicy: Default
